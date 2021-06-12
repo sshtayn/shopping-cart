@@ -42,6 +42,7 @@ def to_usd(my_price):
 #print(products)
 
 total_price= 0
+selected_ids=[]
 
 while True:
     
@@ -49,12 +50,27 @@ while True:
     if selected_id== "done":
         break
     else:
-        matching_products=[p for p in products if str(p["id"])==str(selected_id)]
-        matching_product= matching_products[0]
-        total_price= total_price+ (matching_product["price"])
-        print("CHOSEN PRODUCT:" + matching_product["name"]+ " "+str(matching_product["price"]))
-    
+        #matching_products=[p for p in products if str(p["id"])==str(selected_id)]
+        #matching_product= matching_products[0]
+        #total_price= total_price+ (matching_product["price"])
+        #print("CHOSEN PRODUCT:" + matching_product["name"]+ " "+str(matching_product["price"]))
+        selected_ids.append(selected_id)
 
-print("TOTAL PRICE:",total_price)
+print("SELECTED PRODUCTS:")
+for selected_id in selected_ids:
+    matching_products=[p for p in products if str(p["id"])==str(selected_id)]
+    matching_product= matching_products[0]
+    total_price= total_price+ (matching_product["price"])
+    print("..." + matching_product["name"]+ " "+str(matching_product["price"]))
+
+
+#print(selected_ids)
+print("SUBTOTAL:",(total_price))
+total_tax=total_price*.0875
+print("TAX:",total_tax)
+Total_inclTax=total_price+total_tax
+print("TOTAL:",Total_inclTax)
+
+
 
 

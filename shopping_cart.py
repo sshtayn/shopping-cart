@@ -43,7 +43,7 @@ def to_usd(my_price):
 
 
 import datetime
-import operator
+
 total_price= 0
 selected_ids=[]
 

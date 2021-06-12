@@ -41,6 +41,7 @@ def to_usd(my_price):
 
 #print(products)
 
+
 total_price= 0
 selected_ids=[]
 
@@ -65,12 +66,8 @@ for selected_id in selected_ids:
 
 
 #print(selected_ids)
-print("SUBTOTAL:",(total_price))
+print("SUBTOTAL:",to_usd(total_price))
 total_tax=total_price*.0875
-print("TAX:",total_tax)
+print("TAX:",to_usd(total_tax))
 Total_inclTax=total_price+total_tax
-print("TOTAL:",Total_inclTax)
-
-
-
-
+print("TOTAL:", to_usd(Total_inclTax))

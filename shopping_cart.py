@@ -42,6 +42,7 @@ def to_usd(my_price):
 #print(products)
 
 
+import datetime
 total_price= 0
 selected_ids=[]
 
@@ -56,6 +57,13 @@ while True:
         #total_price= total_price+ (matching_product["price"])
         #print("CHOSEN PRODUCT:" + matching_product["name"]+ " "+str(matching_product["price"]))
         selected_ids.append(selected_id)
+print("--------------------------------------")
+print("STEVEN FRESH GOODS")
+print("WWW.STEVEN-FRESH-GOODS.COM")
+print("--------------------------------------")
+my_datetime = datetime.datetime.now()
+print("CHECKOUT AT: ", (my_datetime.strftime("%Y-%m-%d %H:%M:%S")))
+print("--------------------------------------")
 
 print("SELECTED PRODUCTS:")
 for selected_id in selected_ids:
@@ -71,3 +79,7 @@ total_tax=total_price*.0875
 print("TAX:",to_usd(total_tax))
 Total_inclTax=total_price+total_tax
 print("TOTAL:", to_usd(Total_inclTax))
+print("--------------------------------------")
+print("THANKS FOR SHOPPING WITH US! WE HOPE TO SEE YOU AGAIN!")
+
+print("--------------------------------------")

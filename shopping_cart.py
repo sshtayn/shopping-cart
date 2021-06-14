@@ -66,7 +66,7 @@ while True:
             matching_product= matching_products[0]
             selected_ids.append(selected_id)
         except IndexError:
-            print("OOPS, WE CANNOT FIND THAT PRODUCT")
+            print("OOPS, WE CANNOT FIND THAT PRODUCT. Please insert a valid input.")
 
     
 

@@ -27,6 +27,6 @@ To run the application:
 ```
 python shopping_cart.py
 
-# Note: when prompted choose a product identifier between 1 and 20 and type "done" in lower case when you've inputted the ID's of all selected items
+# Note: When prompted, choose a product identifier between 1 and 20 and type "done" in lower case when you've completed shopping and inserted all product identifiers.
 
 

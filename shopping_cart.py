@@ -40,7 +40,14 @@ def to_usd(my_price):
 # TODO: write some Python code here to produce the desired output
 
 #print(products)
+import os
 
+import dotenv
+
+dotenv.load_dotenv()
+
+
+TAX_RATE = os.getenv("TAX_RATE")
 
 import datetime
 
@@ -81,7 +88,7 @@ for selected_id in selected_ids:
 print("--------------------------------------")
 #print(selected_ids)
 print("SUBTOTAL:",to_usd(total_price))
-total_tax=total_price*.0875
+total_tax=total_price*(float(TAX_RATE))
 print("TAX:",to_usd(total_tax))
 Total_inclTax=total_price+total_tax
 print("TOTAL:", to_usd(Total_inclTax))
